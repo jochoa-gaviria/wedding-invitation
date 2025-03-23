@@ -1,22 +1,44 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
+		<meta name="description" content="Invitación a nuestra boda" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>{title}</title>
 	</head>
-	<body>
+	<body class="bg-rose-50">
 		<slot />
+		<footer class="py-8 bg-rose-800 text-white text-center">
+			<p class="font-dancing text-2xl mb-2">Erika & Juan</p>
+			<p class="text-sm">5 de Septiembre, 2025</p>
+		</footer>
 	</body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
+<style is:global>
+	:root {
+		--accent: 255, 99, 132;
+		--accent-light: 255, 228, 230;
+	}
+	html {
+		font-family: 'Lora', serif;
+		scroll-behavior: smooth;
+	}
+	.font-dancing {
+		font-family: 'Dancing Script', cursive;
 	}
 </style>
+

@@ -1,0 +1,60 @@
+---
+interface Props {
+  targetDate: string;
+}
+
+const { targetDate } = Astro.props;
+---
+
+<div class="countdown-container max-w-3xl mx-auto mb-12">
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div class="bg-white p-4 rounded-lg shadow-md text-center">
+      <div class="text-3xl md:text-5xl font-bold text-rose-600 days">00</div>
+      <div class="text-sm uppercase tracking-wide text-gray-600">Días</div>
+    </div>
+    <div class="bg-white p-4 rounded-lg shadow-md text-center">
+      <div class="text-3xl md:text-5xl font-bold text-rose-600 hours">00</div>
+      <div class="text-sm uppercase tracking-wide text-gray-600">Horas</div>
+    </div>
+    <div class="bg-white p-4 rounded-lg shadow-md text-center">
+      <div class="text-3xl md:text-5xl font-bold text-rose-600 minutes">00</div>
+      <div class="text-sm uppercase tracking-wide text-gray-600">Minutos</div>
+    </div>
+    <div class="bg-white p-4 rounded-lg shadow-md text-center">
+      <div class="text-3xl md:text-5xl font-bold text-rose-600 seconds">00</div>
+      <div class="text-sm uppercase tracking-wide text-gray-600">Segundos</div>
+    </div>
+  </div>
+</div>
+
+<script define:vars={{ targetDate }}>
+  function updateCountdown() {
+    const currentDate = new Date();
+    const targetDateTime = new Date(targetDate);
+    
+    const totalSeconds = Math.floor((targetDateTime - currentDate) / 1000);
+    
+    if (totalSeconds <= 0) {
+      document.querySelector('.days').textContent = '00';
+      document.querySelector('.hours').textContent = '00';
+      document.querySelector('.minutes').textContent = '00';
+      document.querySelector('.seconds').textContent = '00';
+      return;
+    }
+    
+    const days = Math.floor(totalSeconds / 86400);
+    const hours = Math.floor((totalSeconds % 86400) / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = Math.floor(totalSeconds % 60);
+    
+    document.querySelector('.days').textContent = days.toString().padStart(2, '0');
+    document.querySelector('.hours').textContent = hours.toString().padStart(2, '0');
+    document.querySelector('.minutes').textContent = minutes.toString().padStart(2, '0');
+    document.querySelector('.seconds').textContent = seconds.toString().padStart(2, '0');
+  }
+  
+  // Update the countdown every second
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+</script>
+
