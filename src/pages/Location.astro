@@ -1,0 +1,52 @@
+---
+import Section from "../components/Section.astro";
+---
+
+<Section id="ubicacion" title="Ubicación" bgColor="bg-rose-50">
+	<div class="max-w-2xl mx-auto">
+		<div class="bg-white p-6 rounded-lg shadow-md mb-8">
+			<h3 class="text-2xl font-dancing text-rose-800 mb-4 text-center">Finca "El Edén"</h3>
+			<div class="aspect-video bg-gray-200 mb-6 rounded overflow-hidden">
+			<iframe class="w-full h-full rounded-lg shadow-lg" style="border: 0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.502041000137!2d-75.72408632422339!3d6.457894093533662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e45cca9bc9d1b8d%3A0x606ae777988ccd50!2sFinca%20El%20Eden!5e0!3m2!1ses-419!2sco!4v1742744361312!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			<img src="/placeholder.svg?height=450&width=800" alt="Mapa de ubicación" class="w-full h-full object-cover" />
+			</div>
+			<div class="grid md:grid-cols-2 gap-6">
+				<div>
+					<h4 class="text-lg font-semibold text-rose-700 mb-2">Dirección</h4>
+					<p class="text-gray-700 mb-4">San Jerónimo, Antioquia</p>
+
+					<h4 class="text-lg font-semibold text-rose-700 mb-2">Horario</h4>
+					<p class="text-gray-700"><b>Recepción:</b> 15:30 hrs</p>
+					<p class="text-gray-700"><b>Ceremonia:</b> 16:30 hrs</p>
+					<p class="text-gray-700"><b>Cena:</b> 19:00 hrs</p>
+					<p class="text-gray-700"><b>Fiesta:</b> 20:00 hrs</p>
+					<p class="text-gray-700"><b>Despedida:</b> Te puedes quedar a dormir y disfrutar del lugar hasta el día siguiente.</p>
+
+				</div>
+				<div>
+					<h4 class="text-lg font-semibold text-rose-700 mb-2">Cómo llegar</h4>
+					<ul class="text-gray-700 space-y-2">
+						<li class="flex items-start">
+							<span class="text-rose-600 mr-2">•</span>
+							<span><b>En auto:</b> Estacionamiento disponible para invitados</span>
+						</li>
+						<li class="flex items-start">
+							<span class="text-rose-600 mr-2">•</span>
+							<span><b>En transporte público:</b> Hasta el parque de San Jerónimo y allá te podemos recoger.</span>
+						</li>
+						<li class="flex items-start">
+							<span class="text-rose-600 mr-2">•</span>
+							<span><b>Transporte compartido:</b> Algunos invitados tienen su propio vehículo y tienen espacio para llevarte.</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="text-center">
+			<a href="https://maps.app.goo.gl/PZvjVnWtPxV4cEQL9" target="_blank" class="inline-block px-6 py-3 bg-rose-600 text-white rounded-full hover:bg-rose-700 transition duration-300 shadow-md">
+				Ver en Google Maps
+			</a>
+		</div>
+	</div>
+</Section>

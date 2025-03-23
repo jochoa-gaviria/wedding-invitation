@@ -31,9 +31,9 @@ const { targetDate } = Astro.props;
   function updateCountdown() {
     const currentDate = new Date();
     const targetDateTime = new Date(targetDate);
-    
+
     const totalSeconds = Math.floor((targetDateTime - currentDate) / 1000);
-    
+
     if (totalSeconds <= 0) {
       document.querySelector('.days').textContent = '00';
       document.querySelector('.hours').textContent = '00';
@@ -41,20 +41,19 @@ const { targetDate } = Astro.props;
       document.querySelector('.seconds').textContent = '00';
       return;
     }
-    
+
     const days = Math.floor(totalSeconds / 86400);
     const hours = Math.floor((totalSeconds % 86400) / 3600);
     const minutes = Math.floor((totalSeconds % 3600) / 60);
     const seconds = Math.floor(totalSeconds % 60);
-    
+
     document.querySelector('.days').textContent = days.toString().padStart(2, '0');
     document.querySelector('.hours').textContent = hours.toString().padStart(2, '0');
     document.querySelector('.minutes').textContent = minutes.toString().padStart(2, '0');
     document.querySelector('.seconds').textContent = seconds.toString().padStart(2, '0');
   }
-  
+
   // Update the countdown every second
   updateCountdown();
   setInterval(updateCountdown, 1000);
 </script>
-

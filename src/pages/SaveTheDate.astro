@@ -1,0 +1,16 @@
+---
+import Section from "../components/Section.astro";
+import CountdownTimer from "../components/CountdownTimer.astro";
+import PhotoGallery from "../components/PhotoGallery.astro";
+---
+
+<Section id="fecha" title="Nuestra Fecha" bgColor="bg-rose-50">
+	<div class="text-center mb-12">
+		<h2 class="text-3xl md:text-4xl font-dancing text-rose-800 mb-2">5 de Septiembre, 2025</h2>
+		<p class="text-lg text-rose-700">Te esperamos para celebrar nuestro amor</p>
+	</div>
+
+	<CountdownTimer targetDate="2025-09-05T00:00:00" />
+
+	<PhotoGallery />
+</Section>

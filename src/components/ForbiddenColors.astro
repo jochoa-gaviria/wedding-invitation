@@ -1,0 +1,18 @@
+---
+import type { color } from '../types/color';
+
+interface Props {
+  colors: color[];
+}
+
+const { colors } = Astro.props as Props;
+---
+
+<div class="flex gap-2 justify-center mt-4">
+    {colors.map((color) => (
+        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100">
+            <img class="w-5 h-5" src={color.path} alt={color.name}></img>
+            {color.name}
+        </span>
+    ))}
+</div>

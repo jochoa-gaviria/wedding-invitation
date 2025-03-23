@@ -1,163 +1,20 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { Image } from 'astro:assets';
-import CountdownTimer from '../components/CountdownTimer.astro';
-import PhotoGallery from '../components/PhotoGallery.astro';
-import Section from '../components/Section.astro';
+import Portrait from './Portrait.astro';
+import Invitation from './Invitation.astro';
+import DressCode from './DressCode.astro';
+import Agreements from './Agreements.astro';
+import Location from './Location.astro';
+import SaveTheDate from './SaveTheDate.astro';
 ---
 
-<Layout title="Nuestra Boda">
+<Layout title="Juan y Erika - Nuestra Boda">
 	<main class="font-serif">
-		<!-- Portada --> <!-- move to a component -->
-		<section id="portada" class="min-h-screen flex flex-col items-center justify-center relative bg-cover bg-center" style="background-image: url('/placeholder.svg?height=1080&width=1920')">
-			<div class="absolute inset-0 bg-black/30"></div>
-			<div class="relative z-10 text-center px-4">
-				<h1 class="text-5xl md:text-7xl font-bold text-white mb-4 font-dancing">Erika & Juan</h1>
-				<p class="text-xl md:text-2xl text-white font-light">Nos casamos</p>
-			</div>
-		</section>
-
-		<!-- Fecha y cuenta regresiva -->
-		<Section id="fecha" title="Nuestra Fecha" bgColor="bg-rose-50">
-			<div class="text-center mb-12">
-				<h2 class="text-3xl md:text-4xl font-dancing text-rose-800 mb-2">5 de Septiembre, 2025</h2>
-				<p class="text-lg text-rose-700">Te esperamos para celebrar nuestro amor</p>
-			</div>
-			
-			<CountdownTimer targetDate="2025-09-05T00:00:00" />
-			
-			<PhotoGallery />
-		</Section>
-
-		<!-- Invitación --> <!-- move to a component -->
-		<Section id="invitacion" title="Invitación" bgColor="bg-white">
-			<div class="max-w-2xl mx-auto text-center">
-				<div class="mb-8 p-8 border border-rose-200 rounded-lg bg-rose-50/50">
-					<p class="text-xl md:text-2xl italic text-rose-800 leading-relaxed font-light">
-						"Hoy queremos invitarte a compartir con nosotros de la alegría de unir nuestras vidas en matrimonio."
-					</p>
-				</div>
-				<p class="text-lg text-gray-700 leading-relaxed mb-6">
-					Con gran ilusión y amor, deseamos que seas parte de este día tan especial para nosotros. Tu presencia será el mejor regalo que podamos recibir.
-				</p>
-				<p class="text-lg text-gray-700 leading-relaxed">
-					Juntos comenzaremos una nueva aventura y queremos que seas testigo de nuestro compromiso.
-				</p>
-			</div>
-		</Section>
-
-		<!-- Código de vestimenta --> <!-- TODO: move to a component -->
-		<Section id="vestimenta" title="Código de Vestimenta" bgColor="bg-rose-50">
-			<div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-				<div class="text-center p-6 bg-white rounded-lg shadow-md">
-					<div class="w-20 h-20 mx-auto mb-4 flex items-center justify-center bg-rose-100 rounded-full">
-						<svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-rose-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-						</svg> <!-- TODO: Cambiar icono -->
-					</div>
-					<h3 class="text-2xl font-dancing text-rose-800 mb-2">Para Ellas</h3>
-					<p class="text-gray-700">Vestido largo o midi en tonos pasteles. Evitar color blanco.</p>
-				</div>
-				<div class="text-center p-6 bg-white rounded-lg shadow-md">
-					<div class="w-20 h-20 mx-auto mb-4 flex items-center justify-center bg-rose-100 rounded-full">
-						<svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-rose-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-						</svg> <!-- TODO: Cambiar icono -->
-					</div>
-					<h3 class="text-2xl font-dancing text-rose-800 mb-2">Para Ellos</h3>
-					<p class="text-gray-700">Traje formal o guayabera elegante. Colores neutros.</p>
-				</div>
-			</div>
-		</Section>
-
-		<!-- Acuerdos importantes --> <!-- move to a component -->
-		<Section id="acuerdos" title="Acuerdos Importantes" bgColor="bg-white">
-			<div class="max-w-3xl mx-auto">
-				<div class="space-y-6">
-					<div class="flex items-start">
-						<div class="flex-shrink-0 h-10 w-10 flex items-center justify-center rounded-full bg-rose-100 text-rose-600 mr-4">
-							<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-							</svg>
-						</div>
-						<div>
-							<h3 class="text-xl font-semibold text-rose-800 mb-1">Puntualidad</h3>
-							<p class="text-gray-700">La ceremonia comenzará puntualmente a las 16:00 horas. Te pedimos llegar 30 minutos antes para acomodarte.</p>
-						</div>
-					</div>
-					
-					<div class="flex items-start">
-						<div class="flex-shrink-0 h-10 w-10 flex items-center justify-center rounded-full bg-rose-100 text-rose-600 mr-4">
-							<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
-							</svg>
-						</div>
-						<div>
-							<h3 class="text-xl font-semibold text-rose-800 mb-1">Fotografías</h3>
-							<p class="text-gray-700">Durante la ceremonia, te pedimos mantener tus dispositivos guardados. Tendremos fotógrafos profesionales capturando cada momento.</p>
-						</div>
-					</div>
-					
-					<div class="flex items-start">
-						<div class="flex-shrink-0 h-10 w-10 flex items-center justify-center rounded-full bg-rose-100 text-rose-600 mr-4">
-							<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z" />
-							</svg>
-						</div>
-						<div>
-							<h3 class="text-xl font-semibold text-rose-800 mb-1">Regalos</h3>
-							<p class="text-gray-700">Tu presencia es el mejor regalo, pero si deseas obsequiarnos algo, los obsequios en efectivo siempre son bienvenidos</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</Section>
-
-		<!-- Ubicación --> <!-- move to a component -->
-		<Section id="ubicacion" title="Ubicación" bgColor="bg-rose-50">
-			<div class="max-w-4xl mx-auto">
-				<div class="bg-white p-6 rounded-lg shadow-md mb-8">
-					<h3 class="text-2xl font-dancing text-rose-800 mb-4 text-center">Finca "El Edén"</h3>
-					<div class="aspect-video bg-gray-200 mb-6 rounded overflow-hidden">
-						<!-- Aquí iría un mapa o imagen del lugar -->
-						<img src="/placeholder.svg?height=450&width=800" alt="Mapa de ubicación" class="w-full h-full object-cover" />
-					</div>
-					<div class="grid md:grid-cols-2 gap-6">
-						<div>
-							<h4 class="text-lg font-semibold text-rose-700 mb-2">Dirección</h4>
-							<p class="text-gray-700 mb-4">Av. de las Flores 123, Colonia Jardines, Ciudad de México</p>
-							
-							<h4 class="text-lg font-semibold text-rose-700 mb-2">Horario</h4>
-							<p class="text-gray-700">Ceremonia: 16:30 hrs</p>
-							<p class="text-gray-700">Recepción: 15:30 hrs</p>
-						</div>
-						<div>
-							<h4 class="text-lg font-semibold text-rose-700 mb-2">Cómo llegar</h4>
-							<ul class="text-gray-700 space-y-2">
-								<li class="flex items-start">
-									<span class="text-rose-600 mr-2">•</span>
-									<span>En auto: Estacionamiento disponible para invitados</span>
-								</li>
-								<li class="flex items-start">
-									<span class="text-rose-600 mr-2">•</span>
-									<span>En transporte público: Estación de metro "Jardines" a 5 minutos caminando</span>
-								</li>
-								<li class="flex items-start">
-									<span class="text-rose-600 mr-2">•</span>
-									<span>Servicios de transporte compartido disponibles</span>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				
-				<div class="text-center">
-					<a href="#" class="inline-block px-6 py-3 bg-rose-600 text-white rounded-full hover:bg-rose-700 transition duration-300 shadow-md">
-						Abrir en Google Maps
-					</a>
-				</div>
-			</div>
-		</Section>
+	    <Portrait />
+		<SaveTheDate />
+		<Invitation />
+		<DressCode />
+		<Agreements />
+		<Location />
 	</main>
 </Layout>
-

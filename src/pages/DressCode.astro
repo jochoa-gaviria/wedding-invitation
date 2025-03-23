@@ -1,0 +1,52 @@
+---
+import ForbiddenColors  from "../components/ForbiddenColors.astro"
+import Section from "../components/Section.astro"
+import type { color } from '../types/color';
+
+const womenForbiddenColors: color[]  = [
+  {
+    name: "Verde",
+    path: "/forbidden-color-green.svg"
+  },
+  {
+    name: "Blanco",
+    path: "/forbidden-color-white.svg"
+  }
+];
+const menForbiddenColors: color[] = [
+  {
+    name: "Verde",
+    path: "/forbidden-color-green.svg"
+  },
+  {
+    name: "Blanco",
+    path: "/forbidden-color-white.svg"
+  },
+  {
+    name: "Beige",
+    path: "/forbidden-color-beige.svg"
+  }
+];
+
+---
+
+<Section id="vestimenta" title="Código de Vestimenta" bgColor="bg-rose-50">
+	<div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+		<div class="text-center p-6 bg-white rounded-lg shadow-md">
+			<div class="w-20 h-20 mx-auto mb-4 flex items-center justify-center bg-rose-100 rounded-full">
+                <img class="w-12 h-12" src="/girls-dress.svg" alt="dress code girls">
+			</div>
+			<h3 class="text-2xl font-dancing text-rose-800 mb-2">Para Ellas</h3>
+			<p class="text-gray-700">Puedes ir vestida de manera formal, pero prioriza sentirte cómoda. Solo te pedimos evitar el color verde y blanco.</p>
+			<ForbiddenColors colors={womenForbiddenColors} />
+		</div>
+		<div class="text-center p-6 bg-white rounded-lg shadow-md">
+			<div class="w-20 h-20 mx-auto mb-4 flex items-center justify-center bg-rose-100 rounded-full">
+                <img class="w-12 h-12" src="/boys-dress.svg" alt="dress code boys">
+			</div>
+			<h3 class="text-2xl font-dancing text-rose-800 mb-2">Para Ellos</h3>
+			<p class="text-gray-700">Puedes ir vestido de traje o pantalon y camisa. Como te sientas más cómodo. Solo te pedimos evitar el color verde, blanco y beige.</p>
+			<ForbiddenColors colors={menForbiddenColors} />
+		</div>
+	</div>
+</Section>
