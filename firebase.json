@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "boda-juan-y-eri",
+    "public": "dist",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
