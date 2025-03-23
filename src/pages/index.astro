@@ -8,7 +8,7 @@ import Section from '../components/Section.astro';
 
 <Layout title="Nuestra Boda">
 	<main class="font-serif">
-		<!-- Portada -->
+		<!-- Portada --> <!-- move to a component -->
 		<section id="portada" class="min-h-screen flex flex-col items-center justify-center relative bg-cover bg-center" style="background-image: url('/placeholder.svg?height=1080&width=1920')">
 			<div class="absolute inset-0 bg-black/30"></div>
 			<div class="relative z-10 text-center px-4">
@@ -29,7 +29,7 @@ import Section from '../components/Section.astro';
 			<PhotoGallery />
 		</Section>
 
-		<!-- Invitación -->
+		<!-- Invitación --> <!-- move to a component -->
 		<Section id="invitacion" title="Invitación" bgColor="bg-white">
 			<div class="max-w-2xl mx-auto text-center">
 				<div class="mb-8 p-8 border border-rose-200 rounded-lg bg-rose-50/50">
@@ -46,14 +46,14 @@ import Section from '../components/Section.astro';
 			</div>
 		</Section>
 
-		<!-- Código de vestimenta -->
+		<!-- Código de vestimenta --> <!-- TODO: move to a component -->
 		<Section id="vestimenta" title="Código de Vestimenta" bgColor="bg-rose-50">
 			<div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
 				<div class="text-center p-6 bg-white rounded-lg shadow-md">
 					<div class="w-20 h-20 mx-auto mb-4 flex items-center justify-center bg-rose-100 rounded-full">
 						<svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-rose-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-						</svg>
+						</svg> <!-- TODO: Cambiar icono -->
 					</div>
 					<h3 class="text-2xl font-dancing text-rose-800 mb-2">Para Ellas</h3>
 					<p class="text-gray-700">Vestido largo o midi en tonos pasteles. Evitar color blanco.</p>
@@ -62,7 +62,7 @@ import Section from '../components/Section.astro';
 					<div class="w-20 h-20 mx-auto mb-4 flex items-center justify-center bg-rose-100 rounded-full">
 						<svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-rose-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-						</svg>
+						</svg> <!-- TODO: Cambiar icono -->
 					</div>
 					<h3 class="text-2xl font-dancing text-rose-800 mb-2">Para Ellos</h3>
 					<p class="text-gray-700">Traje formal o guayabera elegante. Colores neutros.</p>
@@ -70,7 +70,7 @@ import Section from '../components/Section.astro';
 			</div>
 		</Section>
 
-		<!-- Acuerdos importantes -->
+		<!-- Acuerdos importantes --> <!-- move to a component -->
 		<Section id="acuerdos" title="Acuerdos Importantes" bgColor="bg-white">
 			<div class="max-w-3xl mx-auto">
 				<div class="space-y-6">
@@ -113,7 +113,7 @@ import Section from '../components/Section.astro';
 			</div>
 		</Section>
 
-		<!-- Ubicación -->
+		<!-- Ubicación --> <!-- move to a component -->
 		<Section id="ubicacion" title="Ubicación" bgColor="bg-rose-50">
 			<div class="max-w-4xl mx-auto">
 				<div class="bg-white p-6 rounded-lg shadow-md mb-8">
