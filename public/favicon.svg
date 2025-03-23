@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#be123c" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round">
   <!-- Heart shape -->
-  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" fill="#fda4af" stroke="#be123c" stroke-width="1.5"></path>
+  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" fill="#bbf7d0" stroke="#16a34a" stroke-width="1.5"></path>
   
   <!-- J&E text - lighter version -->
-  <text x="12" y="12" font-family="calibri, sans-serif" font-size="6.5" text-anchor="middle" fill="#d1536e">J &amp; E</text>
+  <text x="12" y="12" font-family="calibri, sans-serif" font-size="6.5" text-anchor="middle" fill="#15803d">J &amp; E</text>
 </svg>
