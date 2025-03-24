@@ -1,0 +1,32 @@
+---
+import Section from "../components/Section.astro"
+---
+
+<Section id="te-esperamos" title="Te esperamos" bgColor="bg-rose-50">
+    <div class="text-center mb-12">
+        <p class="text-lg text-rose-700 flex items-center justify-center gap-2">
+            ¡Por favor confirmanos tu asistencia via WhatsApp!
+            <a
+                href="https://wa.me/+573123456789?text=Hola%20Erika%20y%20Juan%2C%20quiero%20confirmar%20mi%20asistencia%20a%20su%20boda"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-block relative group"
+            >
+                <img
+                    class="w-7 h-7 hover:scale-110 transition-transform duration-300"
+                    src="/whatsapp.svg"
+                    alt="WhatsApp"
+                />
+                <span class="absolute -top-10 left-1/2 -translate-x-1/2
+                    invisible group-hover:visible opacity-0 group-hover:opacity-100
+                    transition-all duration-300
+                    bg-rose-800 text-white px-3 py-1 rounded-lg text-sm whitespace-nowrap
+                    after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2
+                    after:-bottom-1 after:border-4 after:border-transparent after:border-t-rose-800"
+                >
+                    +57 311 743 7028
+                </span>
+            </a>
+        </p>
+    </div>
+</Section>

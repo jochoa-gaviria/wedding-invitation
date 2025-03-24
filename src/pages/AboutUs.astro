@@ -1,0 +1,40 @@
+---
+import Section from '../components/Section.astro';
+import VideoPlayer from '../components/VideoPlayer.astro';
+
+const video = {
+  id: 'GOJk0HW_hJw',
+  title: 'Is this love?',
+  autoplay: true,
+  controls: false,
+  start: 0
+}
+---
+
+<Section id="about-us" title="Un poco de nuestra historia" bgColor="bg-white">
+    <div class="mb-8 p-8 border border-rose-200 rounded-lg bg-rose-50/50">
+    	<p class="text-xl md:text-2xl italic text-rose-800 leading-relaxed font-light text-justify">
+    		Hace cuatro años nos conocimos. Quién diría que hallaríamos al amor de nuestra vida en la mesa de un bar, un viernes cualquiera.
+            Pues si, así inició nuestra historia, sin pensarlo y sin quererlo, con el covid en medio, la vida nos puso uno al lado del otro para apoyarnos, demostrarnos lo que significa el amor y la lealtad.
+            Así juntos, hemos cumplido sueños, metas, y hemos conocido lugares increibles y llenos de aventura.
+            <br />
+            <br />
+            <b>Hoy le decimos si a otra aventura más, una aventura que nos llevará a una vida juntos, muchas risas, amor y muchas sorpresas más...</b>
+    	</p>
+    </div>
+
+    <div class="flex flex-col items-center w-full p-8 space-y-4">
+        <p class="text-xl md:text-3xl text-rose-800 font-dancing mb-2 italic">
+            Para recordar el día en que nos conocimos...
+        </p>
+        <div class="w-full max-w-2xl bg-rose-100/50 rounded-lg shadow-lg p-6 border border-rose-200">
+            <VideoPlayer
+                videoId={video.id}
+                title={video.title}
+                autoplay={video.autoplay}
+                controls={video.controls}
+                start={video.start}
+            />
+        </div>
+    </div>
+</Section>

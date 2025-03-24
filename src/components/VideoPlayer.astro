@@ -1,0 +1,30 @@
+---
+interface Props {
+  videoId: string;
+  title: string;
+  autoplay: boolean;
+  controls: boolean;
+  start: number;
+}
+
+const {
+  videoId,
+  title,
+  autoplay,
+  controls,
+  start,
+} = Astro.props;
+---
+
+<div class="relative max-w-2xl mx-auto w-full aspect-video">
+  <iframe
+    class="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg"
+    src={`https://www.youtube.com/embed/${videoId}?autoplay=${autoplay ? 1 : 0}&controls=${
+      controls ? 1 : 0
+    }&start=${start}`}
+    title={title}
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+  >
+  </iframe>
+</div>
