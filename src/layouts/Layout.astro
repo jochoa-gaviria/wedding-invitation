@@ -13,15 +13,26 @@ const { title } = Astro.props;
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Invitación a nuestra boda" />
-		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 		<meta name="generator" content={Astro.generator} />
+        <style is:global>
+            html, body {
+                overflow-x: hidden;
+                width: 100%;
+                position: relative;
+            }
+
+            #root {
+                overflow-x: hidden;
+            }
+        </style>
 		<title>{title}</title>
 	</head>
-	<body class="bg-rose-50 flex flex-col min-h-screen">
+	<body class="bg-rose-50">
 		<slot />
 		<footer class="py-8 bg-rose-800 text-white text-center">
 			<p class="font-dancing text-2xl mb-2">Erika & Juan</p>
